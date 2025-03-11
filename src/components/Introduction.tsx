@@ -20,9 +20,9 @@ interface LanguageTexts {
 }
 
 const languageTexts: Record<string, LanguageTexts> = {
-    es: { welcome: "Bienvenido a mi portafolio", theme: "Cambiar Tema" },
-    ca: { welcome: "Benvingut al meu portafoli", theme: "Canvia el Tema" },
-    en: { welcome: "Welcome to my portfolio", theme: "Change Theme" }
+    es: { welcome: "Bienvenido a mi portafolio  Mohamed Amine", theme: "Cambiar Tema" },
+    ca: { welcome: "Benvingut al meu portafoli Mohamed Amine", theme: "Canvia el Tema" },
+    en: { welcome: "Welcome to my portfolio Mohamed Amine", theme: "Change Theme" }
 }
 
 const GlobalStyle = createGlobalStyle`
