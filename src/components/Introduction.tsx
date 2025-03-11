@@ -1,13 +1,10 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
-
-// Definir tipos de los temas
 interface Theme {
     background: string
     text: string
 }
 
-// Definir temas de color
 const lightTheme: Theme = {
     background: "#ffffff",
     text: "#000000"
@@ -17,14 +14,11 @@ const darkTheme: Theme = {
     background: "#000000",
     text: "#ffffff"
 }
-
-// Definir los textos para cada idioma
 interface LanguageTexts {
     welcome: string
     theme: string
 }
 
-// Textos en diferentes idiomas
 const languageTexts: Record<string, LanguageTexts> = {
     es: { welcome: "Bienvenido a mi portafolio", theme: "Cambiar Tema" },
     ca: { welcome: "Benvingut al meu portafoli", theme: "Canvia el Tema" },
