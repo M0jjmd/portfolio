@@ -17,12 +17,13 @@ const darkTheme: Theme = {
 interface LanguageTexts {
     welcome: string
     theme: string
+    description: string
 }
 
 const languageTexts: Record<string, LanguageTexts> = {
-    es: { welcome: "Bienvenido a mi portafolio  Mohamed Amine", theme: "Cambiar Tema" },
-    ca: { welcome: "Benvingut al meu portafoli Mohamed Amine", theme: "Canvia el Tema" },
-    en: { welcome: "Welcome to my portfolio Mohamed Amine", theme: "Change Theme" }
+    es: { welcome: "Mohamed Amine", theme: "Cambiar Tema", description: "Soy Mohamed, desarrollador full-stack junior con pasión por la tecnología y el aprendizaje continuo. He trabajado en diversos proyectos que me han permitido fortalecer mis habilidades en frontend y backend, así como mejorar mi capacidad para trabajar en equipo y resolver problemas de manera eficiente. Busco constantemente nuevos desafíos que me ayuden a crecer como profesional y aportar soluciones innovadoras." },
+    ca: { welcome: "Mohamed Amine", theme: "Canvia el Tema", description: "I'm Mohamed, a junior full-stack developer with a passion for technology and continuous learning. I have worked on various projects that have helped me strengthen my frontend and backend skills, as well as improve my ability to work in a team and solve problems efficiently. I'm constantly looking for new challenges that will help me grow as a professional and contribute innovative solutions." },
+    en: { welcome: "Mohamed Amine", theme: "Change Theme", description: "Soc en Mohamed, desenvolupador full-stack junior amb passió per la tecnologia i l'aprenentatge continu. He treballat en diversos projectes que m'han ajudat a millorar les meves habilitats tant en frontend com en backend, així com a reforçar la meva capacitat de treball en equip i resolució de problemes. Estic sempre a la recerca de nous reptes que em permetin créixer com a professional i aportar solucions innovadores." }
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -71,6 +72,8 @@ const Portfolio: React.FC = () => {
             <GlobalStyle />
             <Container>
                 <h1>{languageTexts[language].welcome}</h1>
+                <h2>{languageTexts[language].description}</h2>
+                {/* <h3>{languageTexts[language].welcome}</h3> */}
                 <Button onClick={toggleTheme}>{languageTexts[language].theme}</Button>
                 <select onChange={changeLanguage} value={language}>
                     <option value="es">Español</option>
