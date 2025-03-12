@@ -72,7 +72,8 @@ const Portfolio: React.FC = () => {
             <GlobalStyle />
             <Container>
                 <h1>{languageTexts[language].welcome}</h1>
-                <h2>{languageTexts[language].description}</h2>
+                <h2>Developer</h2>
+                <h3>{languageTexts[language].description}</h3>
                 {/* <h3>{languageTexts[language].welcome}</h3> */}
                 <Button onClick={toggleTheme}>{languageTexts[language].theme}</Button>
                 <select onChange={changeLanguage} value={language}>
