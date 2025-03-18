@@ -30,13 +30,13 @@ const languageTexts: Record<string, LanguageTexts> = {
   },
   ca: {
     welcome: "Mohamed Amine",
-    theme: "Canvia el Tema",
-    description: "I'm Mohamed, a junior full-stack developer with a passion for technology and continuous learning. I have worked on various projects that have helped me strengthen my frontend and backend skills, as well as improve my ability to work in a team and solve problems efficiently. I'm constantly looking for new challenges that will help me grow as a professional and contribute innovative solutions."
+    theme: "Change Theme",
+    description: "Soc en Mohamed, desenvolupador full-stack junior amb passió per la tecnologia i l'aprenentatge continu. He treballat en diversos projectes que m'han ajudat a millorar les meves habilitats tant en frontend com en backend, així com a reforçar la meva capacitat de treball en equip i resolució de problemes. Estic sempre a la recerca de nous reptes que em permetin créixer com a professional i aportar solucions innovadores."
   },
   en: {
     welcome: "Mohamed Amine",
-    theme: "Change Theme",
-    description: "Soc en Mohamed, desenvolupador full-stack junior amb passió per la tecnologia i l'aprenentatge continu. He treballat en diversos projectes que m'han ajudat a millorar les meves habilitats tant en frontend com en backend, així com a reforçar la meva capacitat de treball en equip i resolució de problemes. Estic sempre a la recerca de nous reptes que em permetin créixer com a professional i aportar solucions innovadores."
+    theme: "Canvia el Tema",
+    description: "I'm Mohamed, a junior full-stack developer with a passion for technology and continuous learning. I have worked on various projects that have helped me strengthen my frontend and backend skills, as well as improve my ability to work in a team and solve problems efficiently. I'm constantly looking for new challenges that will help me grow as a professional and contribute innovative solutions."
   }
 }
 
@@ -103,11 +103,11 @@ const Icon = styled.a`
   }
 `
 
-const Select = styled.select`
-  margin: 0.8rem 0;
-  padding: 5px;
-  font-size: 16px;
-`
+// const Select = styled.select`
+//   margin: 0.8rem 0;
+//   padding: 5px;
+//   font-size: 16px;
+// `
 
 // const Button = styled.button`
 // margin: 0.8rem;
@@ -132,6 +132,18 @@ const ThemeButton = styled.button`
   }
 `
 
+const LanguageSelector = styled.div`
+  display: flex;
+  gap: 10px;
+`
+
+const FlagButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+`
+
 const Portfolio: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(darkTheme)
   const [language, setLanguage] = useState<string>("es")
@@ -151,11 +163,16 @@ const Portfolio: React.FC = () => {
         <Content>
           <h1>{languageTexts[language].welcome}</h1>
           <h2>Developer</h2>
-          <Select onChange={changeLanguage} value={language}>
+          {/* <Select onChange={changeLanguage} value={language}>
             <option value="es">Español</option>
             <option value="ca">Català</option>
             <option value="en">English</option>
-          </Select>
+          </Select> */}
+          <LanguageSelector>
+            <FlagButton onClick={() => setLanguage("es")} title="Español">🇪🇸</FlagButton>
+            <FlagButton onClick={() => setLanguage("ca")} title="Català">🇨🇦</FlagButton>
+            <FlagButton onClick={() => setLanguage("en")} title="English">🇬🇧</FlagButton>
+          </LanguageSelector>
           <h3>{languageTexts[language].description}</h3>
         </Content>
 
