@@ -59,7 +59,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   width: 100%;
   padding: 20px;
 `
@@ -110,15 +109,27 @@ const Select = styled.select`
   font-size: 16px;
 `
 
-const Button = styled.button`
-margin: 0.8rem;
-padding: 0.8rem 20px;
-border: none;
-cursor: pointer;
-font-size: 1rem;
-background-color: #007bff;
-color: white;
-border-radius: 5px;
+// const Button = styled.button`
+// margin: 0.8rem;
+// padding: 0.8rem 20px;
+// border: none;
+// cursor: pointer;
+// font-size: 1rem;
+// background-color: #007bff;
+// color: white;
+// border-radius: 5px;
+// `
+
+const ThemeButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const Portfolio: React.FC = () => {
@@ -148,7 +159,10 @@ const Portfolio: React.FC = () => {
           <h3>{languageTexts[language].description}</h3>
         </Content>
 
-        <Button onClick={toggleTheme}>{languageTexts[language].theme}</Button>
+        {/* <Button onClick={toggleTheme}>{languageTexts[language].theme}</Button> */}
+        <ThemeButton onClick={toggleTheme}>
+          {theme === darkTheme ? "🌞" : "🌙"}
+        </ThemeButton>
         {/*  */}
         <ImageContainer>
           <ProfileImage src="https://via.placeholder.com/250" alt="Perfil" />
