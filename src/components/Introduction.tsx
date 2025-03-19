@@ -135,10 +135,6 @@ const Portfolio: React.FC = () => {
     setTheme(theme === darkTheme ? lightTheme : darkTheme)
   }
 
-  const changeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLanguage(e.target.value)
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -166,9 +162,15 @@ const Portfolio: React.FC = () => {
         <ImageContainer>
           <ProfileImage src="https://via.placeholder.com/250" alt="Perfil" />
           <SocialLinks>
-            <Icon href="https://linkedin.com" target="_blank">🔗</Icon>
-            <Icon href="https://github.com" target="_blank">🐙</Icon>
-            <Icon href="/cv.pdf" target="_blank">📄</Icon>
+            <Icon href="https://linkedin.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin" width="30" />
+            </Icon>
+            <Icon href="https://github.com" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="linkedin" width="30" />
+            </Icon>
+            <Icon href="/cv.pdf" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="linkedin" width="30" />
+            </Icon>
           </SocialLinks>
         </ImageContainer>
       </Container>
