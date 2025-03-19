@@ -103,23 +103,6 @@ const Icon = styled.a`
   }
 `
 
-// const Select = styled.select`
-//   margin: 0.8rem 0;
-//   padding: 5px;
-//   font-size: 16px;
-// `
-
-// const Button = styled.button`
-// margin: 0.8rem;
-// padding: 0.8rem 20px;
-// border: none;
-// cursor: pointer;
-// font-size: 1rem;
-// background-color: #007bff;
-// color: white;
-// border-radius: 5px;
-// `
-
 const ThemeButton = styled.button`
   background: none;
   border: none;
@@ -163,20 +146,19 @@ const Portfolio: React.FC = () => {
         <Content>
           <h1>{languageTexts[language].welcome}</h1>
           <h2>Developer</h2>
-          {/* <Select onChange={changeLanguage} value={language}>
-            <option value="es">Español</option>
-            <option value="ca">Català</option>
-            <option value="en">English</option>
-          </Select> */}
           <LanguageSelector>
-            <FlagButton onClick={() => setLanguage("es")} title="Español">🇪🇸</FlagButton>
-            <FlagButton onClick={() => setLanguage("ca")} title="Català">🇨🇦</FlagButton>
-            <FlagButton onClick={() => setLanguage("en")} title="English">🇬🇧</FlagButton>
+            <FlagButton onClick={() => setLanguage("es")} title="Español">
+              <img src="https://flagcdn.com/w40/es.png" alt="Español" width="30" height="20" />
+            </FlagButton>
+            <FlagButton onClick={() => setLanguage("ca")} title="Català">
+              <img src="https://flagcdn.com/w40/ad.png" alt="Català" width="30" height="20" />
+            </FlagButton>
+            <FlagButton onClick={() => setLanguage("en")} title="English">
+              <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20" />
+            </FlagButton>
           </LanguageSelector>
           <h3>{languageTexts[language].description}</h3>
         </Content>
-
-        {/* <Button onClick={toggleTheme}>{languageTexts[language].theme}</Button> */}
         <ThemeButton onClick={toggleTheme}>
           {theme === darkTheme ? "🌞" : "🌙"}
         </ThemeButton>
