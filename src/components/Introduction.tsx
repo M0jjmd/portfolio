@@ -7,7 +7,7 @@ interface Theme {
 }
 
 const lightTheme: Theme = {
-  background: "#ffffff",
+  background: "#f0f0f0",
   text: "#000000"
 }
 
@@ -91,6 +91,9 @@ const ProfileImage = styled.img`
 const SocialLinks = styled.div`
   display: flex;
   gap: 20px;
+  background-color: ${({ theme }) => theme.background === "#000000" ? "#f0f0f0" : "#f0f0f0"};
+  padding: 10px;
+  border-radius: 10px;
 `
 
 const Icon = styled.a`
