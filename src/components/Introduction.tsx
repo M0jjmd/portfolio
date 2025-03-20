@@ -107,6 +107,7 @@ const Icon = styled.a`
 `
 
 const ThemeButton = styled.button`
+  padding: 0 3rem;
   background: none;
   border: none;
   font-size: 30px;
@@ -131,8 +132,8 @@ const FlagButton = styled.button`
 `
 
 const ThemeContainer = styled.div`
-  margin: 0 3rem;
-  width: 80%;
+  display: flex;
+  justify-content: flex-end;
 `
 
 const Portfolio: React.FC = () => {
