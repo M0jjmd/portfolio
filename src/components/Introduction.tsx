@@ -60,7 +60,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  margin: 0 3rem;
 `
 
 const Content = styled.div`
@@ -69,7 +69,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 500px;
+  width: 80%;
 `
 
 const ImageContainer = styled.div`
@@ -130,6 +130,11 @@ const FlagButton = styled.button`
   font-size: 30px;
 `
 
+const ThemeContainer = styled.div`
+  margin: 0 3rem;
+  width: 80%;
+`
+
 const Portfolio: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(darkTheme)
   const [language, setLanguage] = useState<string>("es")
@@ -141,6 +146,11 @@ const Portfolio: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <ThemeContainer>
+        <ThemeButton onClick={toggleTheme}>
+          {theme === darkTheme ? "🌞" : "🌙"}
+        </ThemeButton>
+      </ThemeContainer>
       <Container>
         <Content>
           <h1>{languageTexts[language].welcome}</h1>
@@ -158,9 +168,9 @@ const Portfolio: React.FC = () => {
           </LanguageSelector>
           <h3>{languageTexts[language].description}</h3>
         </Content>
-        <ThemeButton onClick={toggleTheme}>
+        {/* <ThemeButton onClick={toggleTheme}>
           {theme === darkTheme ? "🌞" : "🌙"}
-        </ThemeButton>
+        </ThemeButton> */}
         {/*  */}
         <ImageContainer>
           <ProfileImage src="https://via.placeholder.com/250" alt="Perfil" />
