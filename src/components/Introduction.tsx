@@ -169,10 +169,6 @@ const Portfolio: React.FC = () => {
           </LanguageSelector>
           <h3>{languageTexts[language].description}</h3>
         </Content>
-        {/* <ThemeButton onClick={toggleTheme}>
-          {theme === darkTheme ? "🌞" : "🌙"}
-        </ThemeButton> */}
-        {/*  */}
         <ImageContainer>
           <ProfileImage src="https://via.placeholder.com/250" alt="Perfil" />
           <SocialLinks>
