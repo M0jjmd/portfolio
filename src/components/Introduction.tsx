@@ -178,9 +178,9 @@ const Portfolio: React.FC = () => {
             <Icon href="https://github.com/M0jjmd" target="_blank">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="linkedin" width="30" />
             </Icon>
-            <Icon href="/cv.pdf" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="linkedin" width="30" />
-            </Icon>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Abrir PDF" width="30" />
+            </a>
           </SocialLinks>
         </ImageContainer>
       </Container>
