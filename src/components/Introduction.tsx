@@ -172,7 +172,7 @@ const Portfolio: React.FC = () => {
         <ImageContainer>
           <ProfileImage src="https://via.placeholder.com/250" alt="Perfil" />
           <SocialLinks>
-            <Icon href="linkedin.com/in/mohamed-amine-ab9254242" target="_blank">
+            <Icon href="https://linkedin.com/in/mohamed-amine-ab9254242" target="_blank">
               <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="linkedin" width="30" />
             </Icon>
             <Icon href="https://github.com/M0jjmd" target="_blank">
